@@ -8,8 +8,9 @@ const CategoryPage = () => {
 
 	const { fetchProductsByCategory, products } = useProductStore();
 	const { category } = useParams();
+
 	useEffect(() => {
-		fetchProductsByCategory("category");
+		fetchProductsByCategory(category);
 	}, [fetchProductsByCategory, category]);
 	console.log("products:", products);
   return (
